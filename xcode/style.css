@@ -6,7 +6,8 @@ html {
   margin: 0;
   padding: 0; }
 
-input {
+input,
+select{
   width: 100%;
   padding: 5px;
   margin: 0;
@@ -34,12 +35,15 @@ body {
 @media (min-width: 768px) {
   .container {
     width: 750px; } }
+
 @media (min-width: 992px) {
   .container {
     width: 970px; } }
+
 @media (min-width: 1200px) {
   .container {
     width: 1170px; } }
+
 .heading--main {
   margin: 20px auto;
   text-align: center;
@@ -55,8 +59,30 @@ body {
   border-bottom: none;
   margin: 0; }
 
-.datatable__row input {
+.datatable__row input,
+.datatable__row textarea {
   display: none; }
+
+.datatable__row .datatable__button--editing {
+  display: none; }
+
+.datatable__row--editing input,
+.datatable__row--editing textarea {
+  display: block; }
+
+.datatable__row--add input,
+.datatable__row--add textarea {
+  display: block; }
+
+.datatable__field-value {
+  margin-bottom: 0;
+  font-size: 14px; }
+
+.datatable__row-section {
+  border: none;
+  margin: 0;
+  padding: 10px;
+  flex-grow: 1; }
 
 .datatable__row-section--button-section {
   margin-left: auto;
@@ -69,7 +95,6 @@ body {
   align-items: center; }
 
 .datatable__input-label {
-  position: relative;
   display: block;
   text-align: left;
   font-size: 14px;
@@ -94,12 +119,15 @@ body {
   line-height: 1.25;
   border-radius: 4px; }
 
+.datatable__select {
+  display: block;
+  margin-bottom: 10px; }
+
 .datatable__tasks-container:empty {
   position: relative; }
 
 .datatable__tasks-container:empty::after {
-  content: 'Waiting for Your Numbers.'; }
+  content: 'Waiting for Your Numbers'; }
 
 .template {
-  display: none;
-}
+  display: none; }
