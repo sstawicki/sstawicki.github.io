@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var apiRoot = 'http://localhost:8080/';
+  var apiRoot = 'https://tranquil-mountain-73588.herokuapp.com/';
   const $tasksContainer = $('[data-tasks-container]');
 	
   function handleTaskSubmitRequest(event) {
